@@ -15,32 +15,25 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-cyan-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b-4 border-amber-300 shadow-lg">
+      <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_881eaa2f-4116-4ff9-837f-58aefc0a74da/artifacts/ybo57dlj_CATALOGO%20REGISREISS%20%281%29.pdf" 
-                alt="Regis Reis Logo" 
-                className="h-14 w-auto"
-                onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/150x60/6366f1/ffffff?text=REGIS+REIS';
-                }}
-              />
+              <div className="text-2xl font-bold text-gray-900">REGIS REIS</div>
             </div>
             <nav className="hidden md:flex items-center gap-8">
-              <Link to="/" className="text-lg font-bold text-purple-700 hover:text-cyan-600 transition-all duration-300 hover:scale-110">Home</Link>
-              <Link to="/produtos" className="text-lg font-bold text-purple-700 hover:text-cyan-600 transition-all duration-300 hover:scale-110">Produtos</Link>
-              <Link to="/instalacoes" className="text-lg font-bold text-purple-700 hover:text-cyan-600 transition-all duration-300 hover:scale-110">Instalações</Link>
-              <Link to="/contato" className="text-lg font-bold text-purple-700 hover:text-cyan-600 transition-all duration-300 hover:scale-110">Contato</Link>
+              <Link to="/" className="text-base font-medium text-gray-900 hover:text-purple-600 transition-colors">Home</Link>
+              <Link to="/produtos" className="text-base font-medium text-gray-600 hover:text-purple-600 transition-colors">Produtos</Link>
+              <Link to="/instalacoes" className="text-base font-medium text-gray-600 hover:text-purple-600 transition-colors">Instalações</Link>
+              <Link to="/contato" className="text-base font-medium text-gray-600 hover:text-purple-600 transition-colors">Contato</Link>
             </nav>
             <Button 
               onClick={handleWhatsApp}
-              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-green-600 hover:bg-green-700 text-white font-medium px-6 rounded-lg transition-colors"
             >
-              <Phone className="mr-2 h-5 w-5" />
+              <Phone className="mr-2 h-4 w-4" />
               WhatsApp
             </Button>
           </div>
@@ -48,46 +41,45 @@ const Home = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-100 via-cyan-100 to-amber-100 opacity-60"></div>
-        <div className="container mx-auto relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <Badge className="bg-gradient-to-r from-amber-400 to-orange-400 text-white text-lg px-4 py-2 rounded-full inline-flex items-center gap-2">
-                <Sparkles className="h-5 w-5" />
-                Brinquedos de Espuma Personalizados
-              </Badge>
-              <h1 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-cyan-600 to-amber-500 leading-tight">
-                Criamos Diversão Sob Medida!
+      <section className="py-24 px-4 bg-gradient-to-b from-purple-50 to-white">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="inline-block">
+                <Badge className="bg-purple-100 text-purple-700 text-sm px-4 py-2 rounded-full border-0">
+                  Brinquedos de Espuma Personalizados
+                </Badge>
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+                Instalações Personalizadas de Brinquedos de Espuma
               </h1>
-              <p className="text-xl md:text-2xl text-gray-700 font-medium leading-relaxed">
-                Transformamos espaços em ambientes mágicos com <span className="text-purple-600 font-bold">instalações personalizadas</span> de brinquedos de espuma. Do planejamento à execução!
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Transformamos espaços em ambientes seguros e divertidos. Especialistas em instalações sob medida para escolas, clínicas, buffets e condomínios.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   onClick={handleWhatsApp}
                   size="lg"
-                  className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
+                  className="bg-purple-600 hover:bg-purple-700 text-white font-medium px-8 py-6 rounded-lg transition-colors"
                 >
                   Solicitar Orçamento
-                  <ArrowRight className="ml-2 h-6 w-6" />
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button 
                   variant="outline"
                   size="lg"
                   onClick={() => document.getElementById('produtos-destaque').scrollIntoView({ behavior: 'smooth' })}
-                  className="border-3 border-purple-600 text-purple-600 hover:bg-purple-50 font-bold text-lg px-8 py-6 rounded-full transition-all duration-300 hover:scale-105"
+                  className="border-2 border-gray-300 text-gray-700 hover:border-purple-600 hover:text-purple-600 font-medium px-8 py-6 rounded-lg transition-colors"
                 >
                   Ver Produtos
                 </Button>
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-purple-300 via-cyan-300 to-amber-300 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
               <img 
                 src="https://customer-assets.emergentagent.com/job_881eaa2f-4116-4ff9-837f-58aefc0a74da/artifacts/su0ng6yq_WhatsApp%20Image%202026-02-05%20at%2000.05.46%20%281%29.jpeg"
-                alt="Brinquedos Coloridos"
-                className="relative rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500 border-4 border-white"
+                alt="Brinquedos de Espuma"
+                className="rounded-2xl shadow-xl"
               />
             </div>
           </div>
@@ -95,47 +87,47 @@ const Home = () => {
       </section>
 
       {/* Diferenciais */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto">
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-7xl">
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-4 border-purple-200 hover:border-purple-400 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-purple-50 to-white">
+            <Card className="border border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg bg-white">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
-                  <Sparkles className="h-8 w-8 text-white" />
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                  <CheckCircle className="h-6 w-6 text-purple-600" />
                 </div>
-                <h3 className="text-2xl font-black text-purple-700">Instalação Personalizada</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Instalação Personalizada</h3>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  Criamos e instalamos produtos sob medida para seu espaço. Cada projeto é único!
+                <p className="text-gray-600 leading-relaxed">
+                  Criamos e instalamos produtos sob medida para seu espaço. Cada projeto é único e adaptado às suas necessidades.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-4 border-cyan-200 hover:border-cyan-400 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-cyan-50 to-white">
+            <Card className="border border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg bg-white">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
-                  <Star className="h-8 w-8 text-white" />
+                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
+                  <CheckCircle className="h-6 w-6 text-cyan-600" />
                 </div>
-                <h3 className="text-2xl font-black text-cyan-700">Qualidade Garantida</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Qualidade Garantida</h3>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  Produtos 100% nacionais em espuma de alta qualidade, seguros e duráveis.
+                <p className="text-gray-600 leading-relaxed">
+                  Produtos 100% nacionais em espuma de alta qualidade, seguros, duráveis e certificados.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-4 border-amber-200 hover:border-amber-400 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-amber-50 to-white">
+            <Card className="border border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg bg-white">
               <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
-                  <MapPin className="h-8 w-8 text-white" />
+                <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                  <MapPin className="h-6 w-6 text-amber-600" />
                 </div>
-                <h3 className="text-2xl font-black text-amber-700">Atendimento Local</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Atendimento Regional</h3>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  Atendemos toda região com instalação profissional e suporte completo.
+                <p className="text-gray-600 leading-relaxed">
+                  Atendemos toda região com instalação profissional, suporte completo e garantia.
                 </p>
               </CardContent>
             </Card>
@@ -144,10 +136,10 @@ const Home = () => {
       </section>
 
       {/* Produtos Destaque */}
-      <section id="produtos-destaque" className="py-20 px-4 bg-gradient-to-b from-white to-purple-50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-cyan-600 mb-4">
+      <section id="produtos-destaque" className="py-20 px-4 bg-gray-50">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Produtos em Destaque
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -159,36 +151,33 @@ const Home = () => {
             {produtosDestaque.map((produto) => (
               <Card 
                 key={produto.id}
-                className="overflow-hidden border-3 border-gray-200 hover:border-purple-400 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white"
+                className="overflow-hidden border border-gray-200 hover:border-purple-300 transition-all duration-300 hover:shadow-xl bg-white group"
                 onMouseEnter={() => setHoveredProduct(produto.id)}
                 onMouseLeave={() => setHoveredProduct(null)}
               >
-                <div className="relative overflow-hidden h-64">
+                <div className="relative overflow-hidden h-64 bg-gray-100">
                   <img 
                     src={produto.imagem} 
                     alt={produto.nome}
                     className={`w-full h-full object-cover transition-transform duration-500 ${
-                      hoveredProduct === produto.id ? 'scale-110' : 'scale-100'
+                      hoveredProduct === produto.id ? 'scale-105' : 'scale-100'
                     }`}
                   />
-                  <Badge className="absolute top-3 right-3 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold px-3 py-1 rounded-full">
-                    Destaque
-                  </Badge>
                 </div>
                 <CardHeader>
-                  <Badge className="bg-purple-100 text-purple-700 w-fit mb-2 rounded-full px-3 py-1">
+                  <Badge className="bg-purple-50 text-purple-700 w-fit mb-2 rounded-md px-3 py-1 border-0 text-xs font-medium">
                     {produto.categoria}
                   </Badge>
-                  <h3 className="text-xl font-black text-gray-800">{produto.nome}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900">{produto.nome}</h3>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 leading-relaxed">{produto.descricao}</p>
-                  <p className="text-sm text-cyan-600 font-semibold mt-2">Dimensões: {produto.dimensoes}</p>
+                  <p className="text-gray-600 leading-relaxed text-sm mb-2">{produto.descricao}</p>
+                  <p className="text-sm text-gray-500">Dimensões: {produto.dimensoes}</p>
                 </CardContent>
                 <CardFooter>
                   <Button 
                     onClick={handleWhatsApp}
-                    className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold rounded-full transition-all duration-300 hover:scale-105"
+                    className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors"
                   >
                     Solicitar Orçamento
                   </Button>
