@@ -341,10 +341,10 @@ export const instalacoes = [
 export const categorias = [
   { nome: 'Todos', slug: 'todos' },
   { nome: 'Piscinas', slug: 'piscinas' },
+  { nome: 'Cama Elástica', slug: 'cama elastica' },
+  { nome: 'Playground', slug: 'playground' },
   { nome: 'Mobiliário', slug: 'mobiliario' },
   { nome: 'Circuitos', slug: 'circuitos' },
-  { nome: 'Almofadas', slug: 'almofadas' },
-  { nome: 'Educativo', slug: 'educativo' },
-  { nome: 'Equipamentos', slug: 'equipamentos' },
-  { nome: 'Segurança', slug: 'seguranca' }
+  { nome: 'Área Baby', slug: 'area baby' },
+  { nome: 'Educativo', slug: 'educativo' }
 ];
