@@ -20,8 +20,12 @@ const Home = () => {
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
-            <Link to="/" className="text-2xl font-bold text-gray-900 tracking-tight">
-              REGIS REIS
+            <Link to="/" className="flex items-center">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_playground-install/artifacts/zu0z59od_image.png"
+                alt="Regis Reis Logo" 
+                className="h-12 w-auto"
+              />
             </Link>
             <nav className="hidden md:flex items-center gap-10">
               <Link to="/" className="text-sm font-medium text-gray-900 hover:text-purple-600 transition-colors">
@@ -44,11 +48,11 @@ const Home = () => {
       {/* WhatsApp Floating Button */}
       <button
         onClick={handleWhatsApp}
-        className="fixed bottom-8 right-8 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 group"
+        className="fixed bottom-8 right-8 z-50 bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 group"
         aria-label="Falar no WhatsApp"
       >
-        <Phone className="h-6 w-6" />
-        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-sm px-4 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+        <Phone className="h-7 w-7" />
+        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-sm px-4 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
           Fale Conosco
         </span>
       </button>
