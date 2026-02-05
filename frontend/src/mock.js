@@ -1,256 +1,294 @@
-// Mock data para produtos - Baseado no catálogo e concorrentes
+// Mock data para produtos - Baseado em catálogos e concorrentes
 export const produtos = [
-  // Produtos do Catálogo PDF
+  // PISCINAS DE BOLINHAS
   {
     id: 1,
-    nome: 'Almofadão Espumado',
-    categoria: 'Almofadas',
-    imagem: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600',
-    descricao: 'Almofadão gigante que estimula a percepção. Pode ser utilizado com diversos materiais em seu interior.',
-    dimensoes: '140x140x15cm',
-    destaque: true
-  },
-  {
-    id: 2,
-    nome: 'Piscina de Bolinhas',
+    nome: 'Piscina de Bolinhas Quadrada 120x120cm',
     categoria: 'Piscinas',
     imagem: 'https://customer-assets.emergentagent.com/job_881eaa2f-4116-4ff9-837f-58aefc0a74da/artifacts/su0ng6yq_WhatsApp%20Image%202026-02-05%20at%2000.05.46%20%281%29.jpeg',
-    descricao: 'Piscina de bolinhas espumada desmontável, segura e confortável para diversão das crianças.',
+    descricao: 'Piscina de bolinhas espumada desmontável, ideal para áreas de recreação infantil.',
     dimensoes: '120x120x30cm',
     destaque: true
   },
   {
-    id: 3,
-    nome: 'Conjunto Mesa e Cadeiras',
-    categoria: 'Mobiliário',
-    imagem: 'https://customer-assets.emergentagent.com/job_881eaa2f-4116-4ff9-837f-58aefc0a74da/artifacts/x1bm2zqg_WhatsApp%20Image%202026-02-05%20at%2000.05.46.jpeg',
-    descricao: 'Mesa e cadeiras espumadas coloridas, perfeitas para atividades educativas e recreativas.',
-    dimensoes: 'Mesa: 60x60x50cm',
+    id: 2,
+    nome: 'Piscina de Bolinhas Grande 150x150cm',
+    categoria: 'Piscinas',
+    imagem: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600',
+    descricao: 'Piscina espumada de grande capacidade, perfeita para buffets e escolas.',
+    dimensoes: '150x150x30cm',
     destaque: true
+  },
+  
+  // CAMA ELÁSTICA
+  {
+    id: 3,
+    nome: 'Cama Elástica 2,00m Colorida',
+    categoria: 'Cama Elástica',
+    imagem: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600',
+    descricao: 'Cama elástica nacional colorida com rede de proteção, ideal para crianças pequenas.',
+    dimensoes: 'Diâmetro 2,00m',
+    destaque: false
   },
   {
     id: 4,
-    nome: 'Túnel Sensorial',
-    categoria: 'Circuitos',
+    nome: 'Cama Elástica 4,27m Profissional',
+    categoria: 'Cama Elástica',
+    imagem: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600',
+    descricao: 'Cama elástica grande com lona preta, estrutura reforçada e 4 pés de sustentação.',
+    dimensoes: 'Diâmetro 4,27m',
+    destaque: false
+  },
+
+  // PLAYGROUND MODULAR
+  {
+    id: 5,
+    nome: 'Playground Fun Play',
+    categoria: 'Playground',
     imagem: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600',
-    descricao: 'Túnel indicado para desenvolvimento da propriocepção, planejamento motor e mapeamento visual.',
-    dimensoes: 'Comprimento variável',
+    descricao: 'Playground modular completo com escorregadores, túneis e áreas de escalada.',
+    dimensoes: 'Modular',
     destaque: true
   },
   {
-    id: 5,
-    nome: 'Escada Espumada',
-    categoria: 'Circuitos',
-    imagem: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600',
-    descricao: 'Escada que estimula movimentação e equilíbrio. Ideal para circuitos psicomotores.',
-    dimensoes: '60x40x30cm',
-    destaque: false
-  },
-  {
     id: 6,
-    nome: 'Rampa Espumada',
-    categoria: 'Circuitos',
-    imagem: 'https://images.unsplash.com/photo-1576668174940-75cb03a0897e?w=600',
-    descricao: 'Rampa que estimula coordenação olho-mão durante movimentos de subida e descida.',
-    dimensoes: '80x40x20cm',
-    destaque: false
+    nome: 'Playground MiniPlay Petit',
+    categoria: 'Playground',
+    imagem: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600',
+    descricao: 'Playground compacto ideal para espaços menores, com escorregador e área de escalada.',
+    dimensoes: 'Compacto',
+    destaque: true
   },
   {
     id: 7,
-    nome: 'Formas Geométricas',
-    categoria: 'Educativo',
-    imagem: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600',
-    descricao: 'Conjunto de formas geométricas espumadas para aprendizado lúdico e desenvolvimento cognitivo.',
-    dimensoes: 'Variadas',
+    nome: 'Casa na Árvore Smart',
+    categoria: 'Playground',
+    imagem: 'https://images.unsplash.com/photo-1576668174940-75cb03a0897e?w=600',
+    descricao: 'Casa elevada com balanços integrados, escorregador e área de recreação.',
+    dimensoes: 'Grande',
     destaque: false
   },
+
+  // MÓVEIS MONTESSORI
   {
     id: 8,
-    nome: 'Colchonete',
-    categoria: 'Segurança',
-    imagem: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600',
-    descricao: 'Colchonete espumado para segurança, conforto e relaxamento. Essencial para áreas de atividades.',
-    dimensoes: '130x150cm',
-    destaque: false
+    nome: 'Caminha Montessori Solteiro',
+    categoria: 'Mobiliário',
+    imagem: 'https://customer-assets.emergentagent.com/job_881eaa2f-4116-4ff9-837f-58aefc0a74da/artifacts/x1bm2zqg_WhatsApp%20Image%202026-02-05%20at%2000.05.46.jpeg',
+    descricao: '100% espuma e corino, estrutura baixa seguindo método Montessori.',
+    dimensoes: '208x108x25cm',
+    destaque: true
   },
   {
     id: 9,
-    nome: 'Rolo Sensorial',
-    categoria: 'Equipamentos',
-    imagem: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600',
-    descricao: 'Estimula coordenação motora, concentração e fortalecimento de membros com diversão.',
-    dimensoes: '80x30cm diâmetro',
+    nome: 'Caminha Montessori Casal',
+    categoria: 'Mobiliário',
+    imagem: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600',
+    descricao: 'Cama montessoriana em espuma e corino, tamanho casal para espaços familiares.',
+    dimensoes: '208x158x25cm',
     destaque: false
   },
+
+  // CIRCUITOS ESPUMADOS
   {
     id: 10,
-    nome: 'Ponte Quadrada',
+    nome: 'Ponte Arco-Íris',
     categoria: 'Circuitos',
-    imagem: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600',
-    descricao: 'Ponte que desperta o contato da criança e estimula novas experiências motoras.',
-    dimensoes: '100x60x40cm',
-    destaque: false
+    imagem: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600',
+    descricao: 'Ponte com 5 degraus coloridos para desenvolvimento motor e equilíbrio.',
+    dimensoes: '104x62x40cm',
+    destaque: true
   },
   {
     id: 11,
-    nome: 'Prancha Sensorial',
-    categoria: 'Equipamentos',
+    nome: 'Playground Espumado Borboleta',
+    categoria: 'Circuitos',
     imagem: 'https://images.unsplash.com/photo-1576668174940-75cb03a0897e?w=600',
-    descricao: 'Design moderno que proporciona maior equilíbrio estético e funcional para terapias.',
-    dimensoes: '60x40cm',
+    descricao: 'Conjunto com 6 peças: escada, rampa e asas decorativas temáticas.',
+    dimensoes: '150x130x30cm',
     destaque: false
   },
   {
     id: 12,
-    nome: 'Árvore de Escalada',
-    categoria: 'Equipamentos',
-    imagem: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600',
-    descricao: 'Melhora equilíbrio, coordenação motora e resistência muscular através da escalada.',
-    dimensoes: '120x80x100cm',
+    nome: 'Circuito Soft Túnel',
+    categoria: 'Circuitos',
+    imagem: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600',
+    descricao: 'Circuito com 6 peças incluindo túnel, ideal para estimulação sensorial.',
+    dimensoes: 'Kit com 6 peças',
     destaque: false
   },
   {
     id: 13,
-    nome: 'Painel Sensorial',
-    categoria: 'Educativo',
-    imagem: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600',
-    descricao: 'Melhora raciocínio lógico, coordenação motora e atenção através de atividades interativas.',
-    dimensoes: '80x60cm',
-    destaque: false
-  },
-  {
-    id: 14,
-    nome: 'Bola Sensorial',
-    categoria: 'Equipamentos',
-    imagem: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600',
-    descricao: 'Trabalha direção, lateralidade e graduação de força muscular.',
-    dimensoes: 'Diâmetro 65cm',
-    destaque: false
-  },
-  {
-    id: 15,
-    nome: 'Parede de Escalada',
-    categoria: 'Equipamentos',
-    imagem: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600',
-    descricao: 'Auxilia equilíbrio, coordenação, controle de espasticidade e resistência muscular.',
-    dimensoes: '200x120cm',
-    destaque: false
-  },
-  {
-    id: 16,
-    nome: 'Bancos Terapêuticos',
-    categoria: 'Mobiliário',
-    imagem: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600',
-    descricao: 'Alturas variáveis que permitem explorar criatividade e adequar às necessidades.',
-    dimensoes: 'Altura regulável',
-    destaque: false
-  },
-  {
-    id: 17,
-    nome: 'Cavalo Sensorial',
-    categoria: 'Equipamentos',
-    imagem: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600',
-    descricao: 'Promove estímulos no tripé da integração sensorial através do movimento.',
-    dimensoes: '80x40x60cm',
-    destaque: false
-  },
-  {
-    id: 18,
-    nome: 'Caminho Linear',
+    nome: 'Módulo Escada Espumada',
     categoria: 'Circuitos',
-    imagem: 'https://images.unsplash.com/photo-1576668174940-75cb03a0897e?w=600',
-    descricao: 'Favorece sistema motor e sensorial, dando noção de profundidade e equilíbrio.',
-    dimensoes: '200x30cm',
-    destaque: false
-  },
-  {
-    id: 19,
-    nome: 'Dado Pedagógico',
-    categoria: 'Educativo',
-    imagem: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600',
-    descricao: 'Auxilia a criança a pensar por si mesma usando abordagem sistemática.',
-    dimensoes: '30x30x30cm',
-    destaque: false
-  },
-  {
-    id: 20,
-    nome: 'Disco Flexor',
-    categoria: 'Equipamentos',
-    imagem: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600',
-    descricao: 'Equipamento estável que permite graduar intensidade e experimentar movimento rotacional.',
-    dimensões: 'Diâmetro 40cm',
-    destaque: false
-  },
-  {
-    id: 21,
-    nome: 'Plano Inclinado',
-    categoria: 'Equipamentos',
-    imagem: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600',
-    descricao: 'Estimula sistema vestibular relacionado ao equilíbrio e percepção espacial.',
-    dimensoes: '100x60cm (20°/30°/40°)',
-    destaque: false
-  },
-  {
-    id: 22,
-    nome: 'Tapete Sensorial',
-    categoria: 'Educativo',
-    imagem: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600',
-    descricao: 'Auxilia desenvolvimento cognitivo e motor explorando habilidades sensoriais.',
-    dimensoes: '100x100cm',
-    destaque: false
-  },
-  {
-    id: 23,
-    nome: 'Trapézio',
-    categoria: 'Equipamentos',
     imagem: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600',
-    descricao: 'Indicado para trabalhar membros superiores e promover estímulos de equilíbrio.',
+    descricao: 'Escada modular espumada para compor circuitos psicomotores.',
     dimensoes: '60x30cm',
     destaque: false
   },
   {
-    id: 24,
-    nome: 'Circuito Completo 1',
+    id: 14,
+    nome: 'Módulo Rampa Reta',
     categoria: 'Circuitos',
-    imagem: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600',
-    descricao: 'Circuito com escada e rampa espumada para atividades psicomotoras completas.',
-    dimensoes: 'Conjunto modular',
+    imagem: 'https://images.unsplash.com/photo-1576668174940-75cb03a0897e?w=600',
+    descricao: 'Rampa espumada para coordenação motora e desenvolvimento infantil.',
+    dimensoes: '60x60x30cm',
+    destaque: false
+  },
+
+  // MÓVEIS LÚDICOS
+  {
+    id: 15,
+    nome: 'BrincaSofá Mil Formas',
+    categoria: 'Mobiliário',
+    imagem: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600',
+    descricao: 'Kit modular com 6 peças: 2 colchonetes, 2 triângulos e 2 almofadas.',
+    dimensoes: 'Kit 6 peças',
     destaque: false
   },
   {
+    id: 16,
+    nome: 'BrincaPoltrona Mil Formas',
+    categoria: 'Mobiliário',
+    imagem: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600',
+    descricao: 'Kit modular com 2 peças: colchonete e trapézio, versátil e funcional.',
+    dimensoes: 'Kit 2 peças',
+    destaque: false
+  },
+  {
+    id: 17,
+    nome: 'Poltroninha 2 em 1',
+    categoria: 'Mobiliário',
+    imagem: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600',
+    descricao: 'Poltrona infantil que se transforma em mesinha com cadeira.',
+    dimensoes: '50x46x42cm',
+    destaque: false
+  },
+
+  // BALANÇOS E GANGORRAS
+  {
+    id: 18,
+    nome: 'Gira Gira 8 Lugares',
+    categoria: 'Playground',
+    imagem: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600',
+    descricao: 'Gira-gira tradicional de ferro para 8 crianças, estrutura reforçada.',
+    dimensoes: 'Ferro tradicional',
+    destaque: false
+  },
+  {
+    id: 19,
+    nome: 'Balanço Duplo Plástico',
+    categoria: 'Playground',
+    imagem: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600',
+    descricao: 'Balanço infantil para 2 crianças com estrutura em plástico resistente.',
+    dimensoes: 'Para 2 lugares',
+    destaque: false
+  },
+  {
+    id: 20,
+    nome: 'Gangorra 3 Pranchas',
+    categoria: 'Playground',
+    imagem: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600',
+    descricao: 'Gangorra de ferro com 3 pranchas para múltiplas crianças.',
+    dimensoes: 'Ferro',
+    destaque: false
+  },
+  {
+    id: 21,
+    nome: 'Gangorra Minhoca',
+    categoria: 'Playground',
+    imagem: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600',
+    descricao: 'Gangorra individual temática em formato de minhoca colorida.',
+    dimensoes: 'Individual',
+    destaque: false
+  },
+
+  // ÁREA BABY
+  {
+    id: 22,
+    nome: 'Apoio Bebê para Sentar',
+    categoria: 'Área Baby',
+    imagem: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600',
+    descricao: 'Apoio em U para auxiliar bebês na fase de aprender a sentar.',
+    dimensoes: '50x40x15cm',
+    destaque: false
+  },
+  {
+    id: 23,
+    nome: 'Senta Bebê Apoio de Coluna',
+    categoria: 'Área Baby',
+    imagem: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600',
+    descricao: 'Suporte espumado ergonômico para desenvolvimento postural de bebês.',
+    dimensoes: '60x50x15cm',
+    destaque: false
+  },
+  {
+    id: 24,
+    nome: 'Rolo Sensorial',
+    categoria: 'Área Baby',
+    imagem: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600',
+    descricao: 'Rolo para estimulação sensorial e tummy time de bebês.',
+    dimensoes: '60x30cm diâmetro',
+    destaque: false
+  },
+
+  // EDUCATIVO
+  {
     id: 25,
-    nome: 'Circuito Completo 2',
-    categoria: 'Circuitos',
-    imagem: 'https://images.unsplash.com/photo-1576668174940-75cb03a0897e?w=600',
-    descricao: 'Circuito com escada, ponte e rampa para desenvolvimento motor avançado.',
-    dimensoes: 'Conjunto modular',
+    nome: 'Kit 15 Almofadas Educativas',
+    categoria: 'Educativo',
+    imagem: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600',
+    descricao: 'Almofadas com números e símbolos matemáticos, inclui bolsa organizadora.',
+    dimensoes: 'Kit 15 peças',
     destaque: false
   },
   {
     id: 26,
-    nome: 'Circuito Completo 3',
-    categoria: 'Circuitos',
-    imagem: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600',
-    descricao: 'Circuito completo com escada, ponte, rampa e piscina de bolinhas.',
-    dimensoes: 'Conjunto modular',
-    destaque: false
-  },
-  {
-    id: 27,
-    nome: 'Balde Sensorial com Bolas',
+    nome: 'Almofadas Coloridas Kit 6un',
     categoria: 'Educativo',
     imagem: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600',
-    descricao: 'Auxilia habilidades motoras e condicionamento. Acompanha 5 bolas para arremesso.',
-    dimensoes: '40x40x50cm',
+    descricao: 'Conjunto de 6 almofadas redondas coloridas para atividades lúdicas.',
+    dimensoes: '30cm diâmetro x 5cm',
+    destaque: false
+  },
+
+  // PLAYGROUND TEMÁTICO
+  {
+    id: 27,
+    nome: 'Castelo Medieval',
+    categoria: 'Playground',
+    imagem: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600',
+    descricao: 'Playground temático medieval com torres, escorregadores e área de imaginação.',
+    dimensoes: 'Grande',
     destaque: false
   },
   {
     id: 28,
-    nome: 'Argolas de Arremesso',
-    categoria: 'Educativo',
-    imagem: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600',
-    descricao: 'Desenvolve percepção visual e motora, estimulando estratégias para conclusão.',
-    dimensoes: 'Kit com 6 argolas',
+    nome: 'Navio dos Piratas',
+    categoria: 'Playground',
+    imagem: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600',
+    descricao: 'Playground temático pirata com estrutura de navio, escorregador e escalada.',
+    dimensoes: 'Grande',
+    destaque: false
+  },
+
+  // ACESSÓRIOS
+  {
+    id: 29,
+    nome: 'Puff Dobrável 3 em 1',
+    categoria: 'Mobiliário',
+    imagem: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600',
+    descricao: 'Puff multiuso que vira colchonete ou assento, revestimento em suede.',
+    dimensoes: '180x60x10cm',
+    destaque: false
+  },
+  {
+    id: 30,
+    nome: 'Túnel Lúdico Colorido',
+    categoria: 'Circuitos',
+    imagem: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600',
+    descricao: 'Túnel tipo centopeia com cores vibrantes para circuitos de atividades.',
+    dimensoes: 'Extensível',
     destaque: false
   }
 ];
