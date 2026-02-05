@@ -17,70 +17,106 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-        <div className="container mx-auto px-4 py-4">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+        <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="text-2xl font-bold text-gray-900">REGIS REIS</div>
-            </div>
-            <nav className="hidden md:flex items-center gap-8">
-              <Link to="/" className="text-base font-medium text-gray-900 hover:text-purple-600 transition-colors">Home</Link>
-              <Link to="/produtos" className="text-base font-medium text-gray-600 hover:text-purple-600 transition-colors">Produtos</Link>
-              <Link to="/instalacoes" className="text-base font-medium text-gray-600 hover:text-purple-600 transition-colors">Instalações</Link>
-              <Link to="/contato" className="text-base font-medium text-gray-600 hover:text-purple-600 transition-colors">Contato</Link>
+            <Link to="/" className="text-2xl font-bold text-gray-900 tracking-tight">
+              REGIS REIS
+            </Link>
+            <nav className="hidden md:flex items-center gap-10">
+              <Link to="/" className="text-sm font-medium text-gray-900 hover:text-purple-600 transition-colors">
+                Home
+              </Link>
+              <Link to="/produtos" className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors">
+                Produtos
+              </Link>
+              <Link to="/instalacoes" className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors">
+                Instalações
+              </Link>
+              <Link to="/contato" className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors">
+                Contato
+              </Link>
             </nav>
-            <Button 
-              onClick={handleWhatsApp}
-              className="bg-green-600 hover:bg-green-700 text-white font-medium px-6 rounded-lg transition-colors"
-            >
-              <Phone className="mr-2 h-4 w-4" />
-              WhatsApp
-            </Button>
           </div>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-24 px-4 bg-gradient-to-b from-purple-50 to-white">
+      {/* WhatsApp Floating Button */}
+      <button
+        onClick={handleWhatsApp}
+        className="fixed bottom-8 right-8 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 group"
+        aria-label="Falar no WhatsApp"
+      >
+        <Phone className="h-6 w-6" />
+        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-sm px-4 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+          Fale Conosco
+        </span>
+      </button>
+
+      {/* Hero Section - Redesenhado */}
+      <section className="relative px-6 py-32 overflow-hidden bg-white">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div className="inline-block">
-                <Badge className="bg-purple-100 text-purple-700 text-sm px-4 py-2 rounded-full border-0">
-                  Brinquedos de Espuma Personalizados
-                </Badge>
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            {/* Conteúdo */}
+            <div className="space-y-10">
+              <div className="space-y-6">
+                <span className="inline-block text-sm font-semibold text-purple-600 tracking-wide uppercase">
+                  Instalações Profissionais
+                </span>
+                <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight">
+                  Brinquedos de Espuma Sob Medida
+                </h1>
+                <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
+                  Criamos ambientes seguros e estimulantes com instalações personalizadas. Atendemos escolas, clínicas, buffets e condomínios em toda região.
+                </p>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-                Instalações Personalizadas de Brinquedos de Espuma
-              </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Transformamos espaços em ambientes seguros e divertidos. Especialistas em instalações sob medida para escolas, clínicas, buffets e condomínios.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button 
                   onClick={handleWhatsApp}
                   size="lg"
-                  className="bg-purple-600 hover:bg-purple-700 text-white font-medium px-8 py-6 rounded-lg transition-colors"
+                  className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-10 py-7 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
                 >
                   Solicitar Orçamento
-                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button 
                   variant="outline"
                   size="lg"
                   onClick={() => document.getElementById('produtos-destaque').scrollIntoView({ behavior: 'smooth' })}
-                  className="border-2 border-gray-300 text-gray-700 hover:border-purple-600 hover:text-purple-600 font-medium px-8 py-6 rounded-lg transition-colors"
+                  className="border-2 border-gray-200 text-gray-700 hover:border-gray-300 hover:bg-gray-50 font-semibold px-10 py-7 text-lg rounded-xl transition-all"
                 >
-                  Ver Produtos
+                  Conhecer Produtos
                 </Button>
               </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-100">
+                <div>
+                  <div className="text-3xl font-bold text-gray-900">500+</div>
+                  <div className="text-sm text-gray-600 mt-1">Instalações</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-gray-900">10+</div>
+                  <div className="text-sm text-gray-600 mt-1">Anos</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-gray-900">100%</div>
+                  <div className="text-sm text-gray-600 mt-1">Personalizável</div>
+                </div>
+              </div>
             </div>
-            <div className="relative">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_881eaa2f-4116-4ff9-837f-58aefc0a74da/artifacts/su0ng6yq_WhatsApp%20Image%202026-02-05%20at%2000.05.46%20%281%29.jpeg"
-                alt="Brinquedos de Espuma"
-                className="rounded-2xl shadow-xl"
-              />
+
+            {/* Imagem */}
+            <div className="relative lg:ml-10">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_881eaa2f-4116-4ff9-837f-58aefc0a74da/artifacts/su0ng6yq_WhatsApp%20Image%202026-02-05%20at%2000.05.46%20%281%29.jpeg"
+                  alt="Instalação de Brinquedos de Espuma"
+                  className="w-full h-auto"
+                />
+              </div>
+              {/* Decorative element */}
+              <div className="absolute -z-10 top-10 -right-10 w-72 h-72 bg-purple-100 rounded-full blur-3xl opacity-60"></div>
             </div>
           </div>
         </div>
