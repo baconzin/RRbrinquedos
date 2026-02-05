@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, MapPin, Mail, Star, ArrowRight, Sparkles } from 'lucide-react';
+import { Phone, MapPin, Mail, CheckCircle, ArrowRight } from 'lucide-react';
 import { produtos, instalacoes } from '../mock';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '../components/ui/card';
