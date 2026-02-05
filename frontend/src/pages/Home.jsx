@@ -53,61 +53,53 @@ const Home = () => {
         </span>
       </button>
 
-      {/* Hero Section - Redesenhado */}
-      <section className="relative px-6 py-32 overflow-hidden bg-white">
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            {/* Conteúdo */}
-            <div className="space-y-10">
-              <div className="space-y-6">
-                <span className="inline-block text-sm font-semibold text-purple-600 tracking-wide uppercase">
-                  Instalações Profissionais
-                </span>
-                <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight">
-                  Brinquedos de Espuma Sob Medida
-                </h1>
-                <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
-                  Criamos ambientes seguros e estimulantes com instalações personalizadas. Atendemos escolas, clínicas, buffets e condomínios em toda região.
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button 
-                  onClick={handleWhatsApp}
-                  size="lg"
-                  className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-10 py-7 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
-                >
-                  Solicitar Orçamento
-                </Button>
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  onClick={() => document.getElementById('produtos-destaque').scrollIntoView({ behavior: 'smooth' })}
-                  className="border-2 border-gray-200 text-gray-700 hover:border-gray-300 hover:bg-gray-50 font-semibold px-10 py-7 text-lg rounded-xl transition-all"
-                >
-                  Conhecer Produtos
-                </Button>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-100">
-                <div>
-                  <div className="text-3xl font-bold text-gray-900">500+</div>
-                  <div className="text-sm text-gray-600 mt-1">Instalações</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-gray-900">10+</div>
-                  <div className="text-sm text-gray-600 mt-1">Anos</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-gray-900">100%</div>
-                  <div className="text-sm text-gray-600 mt-1">Personalizável</div>
-                </div>
-              </div>
+      {/* Hero Section - Redesenhado Centralizado */}
+      <section className="relative px-6 py-32 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center space-y-12">
+            {/* Badge Destaque */}
+            <div className="inline-block">
+              <span className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-semibold px-6 py-3 rounded-full shadow-lg">
+                <CheckCircle className="h-5 w-5" />
+                Instalações Profissionais
+              </span>
             </div>
 
-            {/* Imagem */}
-            <div className="relative lg:ml-10">
+            {/* Título Principal */}
+            <div className="space-y-6 max-w-4xl mx-auto">
+              <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight">
+                Brinquedos de Espuma
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-cyan-600">
+                  Sob Medida
+                </span>
+              </h1>
+              <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                Criamos ambientes seguros e estimulantes com instalações personalizadas. Atendemos escolas, clínicas, buffets e condomínios.
+              </p>
+            </div>
+
+            {/* Botões */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Button 
+                onClick={handleWhatsApp}
+                size="lg"
+                className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-10 py-7 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+              >
+                Solicitar Orçamento
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button 
+                variant="outline"
+                size="lg"
+                onClick={() => document.getElementById('produtos-destaque').scrollIntoView({ behavior: 'smooth' })}
+                className="border-2 border-gray-200 text-gray-700 hover:border-gray-300 hover:bg-gray-50 font-semibold px-10 py-7 text-lg rounded-xl transition-all"
+              >
+                Conhecer Produtos
+              </Button>
+            </div>
+
+            {/* Imagem Principal */}
+            <div className="relative max-w-5xl mx-auto pt-8">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
                   src="https://customer-assets.emergentagent.com/job_881eaa2f-4116-4ff9-837f-58aefc0a74da/artifacts/su0ng6yq_WhatsApp%20Image%202026-02-05%20at%2000.05.46%20%281%29.jpeg"
@@ -115,11 +107,29 @@ const Home = () => {
                   className="w-full h-auto"
                 />
               </div>
-              {/* Decorative element */}
-              <div className="absolute -z-10 top-10 -right-10 w-72 h-72 bg-purple-100 rounded-full blur-3xl opacity-60"></div>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto pt-12">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-cyan-600">500+</div>
+                <div className="text-sm text-gray-600 mt-2 font-medium">Instalações Realizadas</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-cyan-600">10+</div>
+                <div className="text-sm text-gray-600 mt-2 font-medium">Anos de Experiência</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-cyan-600">100%</div>
+                <div className="text-sm text-gray-600 mt-2 font-medium">Personalizável</div>
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Elemento decorativo */}
+        <div className="absolute top-20 right-10 w-96 h-96 bg-cyan-200 rounded-full blur-3xl opacity-20 -z-10"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-200 rounded-full blur-3xl opacity-20 -z-10"></div>
       </section>
 
       {/* Diferenciais */}
