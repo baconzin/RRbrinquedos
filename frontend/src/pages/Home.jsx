@@ -181,13 +181,13 @@ const Home = () => {
       </section>
 
       {/* Produtos Destaque */}
-      <section id="produtos-destaque" className="py-20 px-4 bg-gray-50">
+      <section id="produtos-destaque" className="py-32 px-6 bg-white">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Produtos em Destaque
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Conheça alguns dos nossos produtos mais populares
             </p>
           </div>
@@ -196,33 +196,33 @@ const Home = () => {
             {produtosDestaque.map((produto) => (
               <Card 
                 key={produto.id}
-                className="overflow-hidden border border-gray-200 hover:border-purple-300 transition-all duration-300 hover:shadow-xl bg-white group"
+                className="overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 bg-white group"
                 onMouseEnter={() => setHoveredProduct(produto.id)}
                 onMouseLeave={() => setHoveredProduct(null)}
               >
-                <div className="relative overflow-hidden h-64 bg-gray-100">
+                <div className="relative overflow-hidden h-72 bg-gray-50">
                   <img 
                     src={produto.imagem} 
                     alt={produto.nome}
-                    className={`w-full h-full object-cover transition-transform duration-500 ${
-                      hoveredProduct === produto.id ? 'scale-105' : 'scale-100'
+                    className={`w-full h-full object-cover transition-transform duration-700 ${
+                      hoveredProduct === produto.id ? 'scale-110' : 'scale-100'
                     }`}
                   />
                 </div>
-                <CardHeader>
-                  <Badge className="bg-purple-50 text-purple-700 w-fit mb-2 rounded-md px-3 py-1 border-0 text-xs font-medium">
+                <CardHeader className="p-6">
+                  <Badge className="bg-purple-50 text-purple-700 w-fit mb-3 rounded-lg px-3 py-1.5 border-0 text-xs font-semibold">
                     {produto.categoria}
                   </Badge>
-                  <h3 className="text-lg font-semibold text-gray-900">{produto.nome}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{produto.nome}</h3>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 leading-relaxed text-sm mb-2">{produto.descricao}</p>
-                  <p className="text-sm text-gray-500">Dimensões: {produto.dimensoes}</p>
+                <CardContent className="px-6 pb-6">
+                  <p className="text-gray-600 leading-relaxed mb-3">{produto.descricao}</p>
+                  <p className="text-sm text-gray-500 font-medium">Dimensões: {produto.dimensoes}</p>
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="p-6 pt-0">
                   <Button 
                     onClick={handleWhatsApp}
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors"
+                    className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl py-6 transition-colors"
                   >
                     Solicitar Orçamento
                   </Button>
@@ -231,11 +231,12 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Link to="/produtos">
               <Button 
                 size="lg"
-                className="bg-purple-600 hover:bg-purple-700 text-white font-medium px-8 py-6 rounded-lg transition-colors"
+                variant="outline"
+                className="border-2 border-gray-200 text-gray-700 hover:border-gray-300 hover:bg-gray-50 font-semibold px-10 py-7 text-lg rounded-xl transition-all"
               >
                 Ver Todos os Produtos
                 <ArrowRight className="ml-2 h-5 w-5" />
