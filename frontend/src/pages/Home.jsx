@@ -247,44 +247,47 @@ const Home = () => {
       </section>
 
       {/* Instalações */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-32 px-6 bg-gray-50">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Nossas Instalações
+              Projetos Realizados
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Veja alguns dos projetos que transformamos em realidade
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Transformamos espaços em ambientes incríveis
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-10">
             {instalacoes.slice(0, 4).map((instalacao) => (
-              <Card key={instalacao.id} className="overflow-hidden border border-gray-200 hover:border-purple-300 transition-all duration-300 hover:shadow-xl group">
-                <img 
-                  src={instalacao.imagem} 
-                  alt={instalacao.titulo}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <CardHeader>
-                  <div className="flex items-center gap-2 text-gray-600 mb-2">
+              <Card key={instalacao.id} className="overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group bg-white">
+                <div className="relative overflow-hidden h-80">
+                  <img 
+                    src={instalacao.imagem} 
+                    alt={instalacao.titulo}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <CardHeader className="p-8">
+                  <div className="flex items-center gap-2 text-gray-500 mb-3">
                     <MapPin className="h-4 w-4" />
                     <span className="font-medium text-sm">{instalacao.local}</span>
                   </div>
                   <h3 className="text-2xl font-semibold text-gray-900">{instalacao.titulo}</h3>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 leading-relaxed">{instalacao.descricao}</p>
+                <CardContent className="px-8 pb-8">
+                  <p className="text-gray-600 leading-relaxed text-lg">{instalacao.descricao}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Link to="/instalacoes">
               <Button 
                 size="lg"
-                className="bg-purple-600 hover:bg-purple-700 text-white font-medium px-8 py-6 rounded-lg transition-colors"
+                variant="outline"
+                className="border-2 border-gray-200 text-gray-700 hover:border-gray-300 hover:bg-gray-50 font-semibold px-10 py-7 text-lg rounded-xl transition-all"
               >
                 Ver Mais Instalações
                 <ArrowRight className="ml-2 h-5 w-5" />
