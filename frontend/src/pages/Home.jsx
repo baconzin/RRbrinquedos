@@ -123,47 +123,56 @@ const Home = () => {
       </section>
 
       {/* Diferenciais */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-32 px-6 bg-gray-50">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg bg-white">
-              <CardHeader>
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                  <CheckCircle className="h-6 w-6 text-purple-600" />
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Por que escolher a Regis Reis?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Experiência e qualidade em cada instalação
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-8">
+              <CardHeader className="p-0 mb-6">
+                <div className="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                  <CheckCircle className="h-7 w-7 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900">Instalação Personalizada</h3>
+                <h3 className="text-2xl font-semibold text-gray-900">Instalação Sob Medida</h3>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 leading-relaxed">
-                  Criamos e instalamos produtos sob medida para seu espaço. Cada projeto é único e adaptado às suas necessidades.
+              <CardContent className="p-0">
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  Projetos únicos desenvolvidos especificamente para o seu espaço e necessidades.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg bg-white">
-              <CardHeader>
-                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
-                  <CheckCircle className="h-6 w-6 text-cyan-600" />
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-8">
+              <CardHeader className="p-0 mb-6">
+                <div className="w-14 h-14 bg-cyan-100 rounded-2xl flex items-center justify-center mb-6">
+                  <CheckCircle className="h-7 w-7 text-cyan-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900">Qualidade Garantida</h3>
+                <h3 className="text-2xl font-semibold text-gray-900">Qualidade Premium</h3>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 leading-relaxed">
-                  Produtos 100% nacionais em espuma de alta qualidade, seguros, duráveis e certificados.
+              <CardContent className="p-0">
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  Espuma de alta densidade, revestimentos duráveis e acabamento profissional.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg bg-white">
-              <CardHeader>
-                <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
-                  <MapPin className="h-6 w-6 text-amber-600" />
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white p-8">
+              <CardHeader className="p-0 mb-6">
+                <div className="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mb-6">
+                  <MapPin className="h-7 w-7 text-amber-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900">Atendimento Regional</h3>
+                <h3 className="text-2xl font-semibold text-gray-900">Suporte Regional</h3>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 leading-relaxed">
-                  Atendemos toda região com instalação profissional, suporte completo e garantia.
+              <CardContent className="p-0">
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  Instalação profissional, manutenção e garantia em toda região de Campinas.
                 </p>
               </CardContent>
             </Card>
