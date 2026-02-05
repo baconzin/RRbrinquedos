@@ -298,59 +298,59 @@ const Home = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-20 px-4 bg-purple-600">
+      <section className="py-32 px-6 bg-purple-600">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Pronto para transformar seu espaço?
+          <h2 className="text-5xl font-bold text-white mb-6">
+            Pronto para começar seu projeto?
           </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Entre em contato agora e receba um orçamento personalizado!
+          <p className="text-xl text-white/90 mb-10 leading-relaxed">
+            Entre em contato e receba um orçamento personalizado sem compromisso
           </p>
           <Button 
             onClick={handleWhatsApp}
             size="lg"
-            className="bg-white text-purple-600 hover:bg-gray-100 font-medium text-lg px-12 py-6 rounded-lg transition-colors"
+            className="bg-white text-purple-600 hover:bg-gray-50 font-semibold text-lg px-12 py-7 rounded-xl transition-all shadow-xl"
           >
             <Phone className="mr-3 h-6 w-6" />
-            Falar no WhatsApp
+            Solicitar Orçamento
           </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4">
+      <footer className="bg-gray-900 text-white py-20 px-6">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Regis Reis</h3>
-              <p className="text-gray-400 leading-relaxed">
-                Especialistas em brinquedos de espuma e instalações personalizadas.
+          <div className="grid md:grid-cols-4 gap-12 mb-12">
+            <div className="md:col-span-2">
+              <h3 className="text-2xl font-bold mb-6">Regis Reis</h3>
+              <p className="text-gray-400 leading-relaxed text-lg max-w-md">
+                Especialistas em brinquedos de espuma e instalações personalizadas desde 2014.
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
-              <ul className="space-y-2">
-                <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
-                <li><Link to="/produtos" className="text-gray-400 hover:text-white transition-colors">Produtos</Link></li>
-                <li><Link to="/instalacoes" className="text-gray-400 hover:text-white transition-colors">Instalações</Link></li>
-                <li><Link to="/contato" className="text-gray-400 hover:text-white transition-colors">Contato</Link></li>
+              <h4 className="text-lg font-semibold mb-6">Links</h4>
+              <ul className="space-y-3">
+                <li><Link to="/" className="text-gray-400 hover:text-white transition-colors text-base">Home</Link></li>
+                <li><Link to="/produtos" className="text-gray-400 hover:text-white transition-colors text-base">Produtos</Link></li>
+                <li><Link to="/instalacoes" className="text-gray-400 hover:text-white transition-colors text-base">Instalações</Link></li>
+                <li><Link to="/contato" className="text-gray-400 hover:text-white transition-colors text-base">Contato</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-lg font-semibold mb-4">Contato</h4>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-2 text-gray-400">
-                  <Phone className="h-5 w-5" />
-                  (19) 97163-6969
+              <h4 className="text-lg font-semibold mb-6">Contato</h4>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3 text-gray-400">
+                  <Phone className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                  <span className="text-base">(19) 97163-6969</span>
                 </li>
-                <li className="flex items-center gap-2 text-gray-400">
-                  <Mail className="h-5 w-5" />
-                  contato@regisreis.com.br
+                <li className="flex items-start gap-3 text-gray-400">
+                  <Mail className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                  <span className="text-base">contato@regisreis.com.br</span>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
             <p>&copy; 2026 Regis Reis. Todos os direitos reservados.</p>
           </div>
         </div>
