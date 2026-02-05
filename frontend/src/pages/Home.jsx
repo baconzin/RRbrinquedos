@@ -119,14 +119,39 @@ const Home = () => {
               </Button>
             </div>
 
-            {/* Imagem Principal */}
+            {/* Carrossel de Imagens */}
             <div className="relative max-w-5xl mx-auto pt-8">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://customer-assets.emergentagent.com/job_881eaa2f-4116-4ff9-837f-58aefc0a74da/artifacts/su0ng6yq_WhatsApp%20Image%202026-02-05%20at%2000.05.46%20%281%29.jpeg"
-                  alt="Instalação de Brinquedos de Espuma"
-                  className="w-full h-auto"
-                />
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl h-96">
+                {carouselImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-opacity duration-1000 ${
+                      index === currentSlide ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  >
+                    <img 
+                      src={image}
+                      alt={`Instalação ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+              
+              {/* Indicadores do carrossel */}
+              <div className="flex justify-center gap-2 mt-6">
+                {carouselImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentSlide 
+                        ? 'bg-purple-600 w-8' 
+                        : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
+                    aria-label={`Ir para slide ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
 
