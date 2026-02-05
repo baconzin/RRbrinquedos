@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, MapPin, Mail, CheckCircle, ArrowRight } from 'lucide-react';
 import { produtos, instalacoes } from '../mock';
@@ -8,7 +8,24 @@ import { Badge } from '../components/ui/badge';
 
 const Home = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const produtosDestaque = produtos.filter(p => p.destaque);
+
+  // Imagens do carrossel
+  const carouselImages = [
+    'https://customer-assets.emergentagent.com/job_881eaa2f-4116-4ff9-837f-58aefc0a74da/artifacts/x1bm2zqg_WhatsApp%20Image%202026-02-05%20at%2000.05.46.jpeg',
+    'https://customer-assets.emergentagent.com/job_881eaa2f-4116-4ff9-837f-58aefc0a74da/artifacts/su0ng6yq_WhatsApp%20Image%202026-02-05%20at%2000.05.46%20%281%29.jpeg',
+    'https://customer-assets.emergentagent.com/job_881eaa2f-4116-4ff9-837f-58aefc0a74da/artifacts/i3jet6yg_28212add-ff94-4c8b-acf1-c15aa1037d22.JPG'
+  ];
+
+  // Auto slide do carrossel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 4000); // Troca a cada 4 segundos
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleWhatsApp = () => {
     window.open('https://wa.me/5519971636969?text=Olá! Gostaria de fazer um orçamento.', '_blank');
